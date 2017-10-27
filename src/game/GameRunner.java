@@ -7,7 +7,10 @@ import people.Person;
 import java.util.Scanner;
 
 public class GameRunner {
-
+	/* think of the two dimensional array as the board; each item in the board is just a Room class, your player is essentially moving between the array and location "cordinates" aka array[i][x];
+	 * this way you can call array[i][x].printdescription to get the story other wise whent the player chooses to move you add or minus one to their "cordinates" and thats what you use to find 
+	 * room and feed more story;
+	 */
     public static void main (String[] args)
     {
         Room[][] map = new Room[5][5];
