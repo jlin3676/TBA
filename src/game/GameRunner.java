@@ -6,6 +6,8 @@ import people.Person;
 
 import java.util.Scanner;
 
+import board.Board;
+
 public class GameRunner {
 	/* think of the two dimensional array as the board; each item in the board is just a Room class, your player is essentially moving between the array and location "cordinates" aka array[i][x];
 	 * this way you can call array[i][x].printdescription to get the story other wise whent the player chooses to move you add or minus one to their "cordinates" and thats what you use to find 
@@ -28,15 +30,15 @@ public class GameRunner {
 
         }
 
-        School tech = new School(map);
+        Board tech = new Board(map);
 
 
         boolean gameOn = true;
-        Person player1 = Utilities.createPerson();
+        Person player1 = new Person(5,5,5);
         Scanner in = new Scanner(System.in);
         while(gameOn)
         {
-            System.out.println("Welcome to the Halls of Tech, " + player1.getFirstName());
+            System.out.println("Welcome to the Halls of Tech ");
             map[0][0].addOccupant(player1);
 
             tech.printMap();
