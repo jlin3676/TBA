@@ -40,7 +40,7 @@ public class GameRunner {
         {
             System.out.println("Welcome to the Halls of Tech ");
             map[0][0].addOccupant(player1);
-
+            player1.setCoord(0, 0);
             tech.printMap();
             player1.printRoom();
             String move = player1.chooseMove();

@@ -32,9 +32,9 @@ public abstract class Room {
     }
 
     
-    public void addOccupant(Person p)
+    public void addOccupant(Person p) // adds an occupant to your private person array
     {
-        this.occupants = Arrays.copyOf(this.occupants,this.occupants.length+1);
+        this.occupants = Arrays.copyOf(this.occupants,this.occupants.length+1); // search Arrays.copyOf
         this.occupants[this.occupants.length-1] = p;
         p.setRoom(this);
     }

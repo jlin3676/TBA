@@ -7,6 +7,8 @@ public class Person {
 	private int health;
 	private int attack;
 	private int fatigue;
+	private int x;
+	private int y;
 	
 	public Person(int health, int attack, int fatigue) {
 		this.health = health;
@@ -28,5 +30,20 @@ public class Person {
 		return null;
 	}
 */
+
+	public void printRoom() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String chooseMove() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public void setCoord(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
 }
 
