@@ -1,5 +1,6 @@
 package people;
 import rooms.Room;
+import board.Board;
 
 public class Person {
 	
@@ -15,21 +16,16 @@ public class Person {
 		this.attack = attack;
 		this.fatigue = fatigue;
 	}
-/*	public void setRoom(Room room) {
+	public void setRoom(Room room) {
 		// TODO Auto-generated method stub
 		
 	}
-
+	
 	public char[] print() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public String getFirstName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-*/
 
 	public void printRoom() {
 		// TODO Auto-generated method stub
@@ -45,5 +41,15 @@ public class Person {
 		this.x = x;
 		this.y = y;
 	}
+	
+	public static void movePlayer(Board tech, Person player1, String move) {
+		
+	}
+
+	public void setRoom(Room room) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
 

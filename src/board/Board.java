@@ -1,5 +1,7 @@
 package board;
 
+import java.util.Arrays;
+
 import rooms.Room;
 
 public class Board {
@@ -24,11 +26,11 @@ public class Board {
             {
                 room.print();
             }
-            System.out.println();
+            System.out.println(schoolMap);
         }
     }
     public Room[][] getSchoolMap() {
-        return schoolMap;
+        return schoolMap;		
     }
 
     public void setSchoolMap(Room[][] schoolMap) {
