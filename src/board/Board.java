@@ -26,7 +26,7 @@ public class Board {
             {
                 room.print();
             }
-            System.out.println(schoolMap);
+            System.out.println();
         }
     }
     public Room[][] getSchoolMap() {

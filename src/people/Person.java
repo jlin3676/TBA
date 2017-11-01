@@ -10,6 +10,7 @@ public class Person {
 	private int fatigue;
 	private int x;
 	private int y;
+	private Room room;
 	
 	public Person(int health, int attack, int fatigue) {
 		this.health = health;
@@ -17,8 +18,7 @@ public class Person {
 		this.fatigue = fatigue;
 	}
 	public void setRoom(Room room) {
-		// TODO Auto-generated method stub
-		
+		this.room = room;
 	}
 	
 	public char[] print() {
@@ -43,11 +43,6 @@ public class Person {
 	}
 	
 	public static void movePlayer(Board tech, Person player1, String move) {
-		
-	}
-
-	public void setRoom(Room room) {
-		// TODO Auto-generated method stub
 		
 	}
 
