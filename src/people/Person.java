@@ -21,9 +21,8 @@ public class Person {
 		this.room = room;
 	}
 	
-	public char[] print() {
-		// TODO Auto-generated method stub
-		return null;
+	public String print() {
+		return ("[ x ]");
 	}
 
 

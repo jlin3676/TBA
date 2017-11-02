@@ -14,6 +14,7 @@ public class Board {
     public Board(Room[][] schoolMap)
     {
         this.schoolMap = schoolMap;
+        System.out.println(this.schoolMap[0][0]);
     }
 
     public void printMap()

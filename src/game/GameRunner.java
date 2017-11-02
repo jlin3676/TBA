@@ -19,7 +19,7 @@ public class GameRunner {
         for (int j = 0; j<map.length; j++)
         {
         	Room[] row = map[j];
-            for (int i = 0; i<row.length;i++)
+            for (int i = 0; i<row.length; i++)
             {
                 boolean[] doors = {true,true,true,true};
                 Person[] people = {};
@@ -29,23 +29,24 @@ public class GameRunner {
             }
 
         }
-
+        
+        //System.out.println(map[0][0]);
         Board tech = new Board(map);
 
 
         boolean gameOn = true;
         Person player1 = new Person(5,5,5);
-        Scanner in = new Scanner(System.in);
+        //Scanner in = new Scanner(System.in);
         while(gameOn)
         {
             System.out.println("Welcome to the Halls of Tech ");
-            map[0][0].addOccupant(player1);
+            //map[0][0].addOccupant(player1); This was not functioning because there was not a print method the person
             player1.setCoord(0, 0);
             tech.printMap();
             player1.printRoom();
             String move = player1.chooseMove();
             Person.movePlayer(tech, player1, move);
-            //gameOn = false;
+            gameOn = false;
             
 
 
@@ -55,7 +56,7 @@ public class GameRunner {
 
 
         }
-		in.close();
+		//in.close();
     }
 
 }

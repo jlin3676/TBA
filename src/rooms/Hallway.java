@@ -13,8 +13,10 @@ public class Hallway extends Room {
 
     public void print()
     {
+    	// if there are people then
         if (getOccupants().length != 0)
         {
+        	// will use the print method in the person class
             System.out.print(getOccupants()[0].print());
         }
         else if (this.explored)
