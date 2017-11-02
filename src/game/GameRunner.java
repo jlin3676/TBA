@@ -35,17 +35,18 @@ public class GameRunner {
 
 
         boolean gameOn = true;
-        Person player1 = new Person(5,5,5);
-        //Scanner in = new Scanner(System.in);
+        Person player1 = new Person(5,5,5,0,0);
+        Scanner in = new Scanner(System.in);
         while(gameOn)
         {
             System.out.println("Welcome to the Halls of Tech ");
-            //map[0][0].addOccupant(player1); This was not functioning because there was not a print method the person
-            player1.setCoord(0, 0);
+            map[0][0].addOccupant(player1); //This was not functioning because there was not a print method the person
+            //player1.setCoord(0, 0);
             tech.printMap();
-            player1.printRoom();
+            
             String move = player1.chooseMove();
-            Person.movePlayer(tech, player1, move);
+            player1.movePlayer(tech, move);
+            tech.printMap();
             gameOn = false;
             
 
