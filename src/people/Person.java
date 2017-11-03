@@ -42,21 +42,21 @@ public class Person {
 			String x = in.nextLine();
 			// logic problem with left 
 			if(x.equals("left")) {
-				if(this.x - 1 >= 0) {
+				if(this.y - 1 >= 0) {
 					isNotValid = false;
 					temp = "left";
 					//break;
 				}
 			}
 			else if(x.equals("right")) {
-				if(this.x+1 < tech.getSchoolMap().length) {
+				if(this.y+1 < tech.getSchoolMap().length) {
 					isNotValid = false;
 					temp = "right";
 					//break;
 				}
 			}
 			else if(x.equals("up")) {
-				if(this.y-1 >= 0) {
+				if(this.x-1 >= 0) {
 					isNotValid = false;
 					temp = "up";
 					//break;
@@ -64,7 +64,7 @@ public class Person {
 			}
 			// logic error with down
 			else if(x.equals("down")) {
-				if(this.y+1 < tech.getSchoolMap().length) {
+				if(this.x+1 < tech.getSchoolMap().length) {
 					isNotValid = false;
 					temp = "down";
 					//break;
