@@ -33,17 +33,47 @@ public class Person {
 
 
 
-	public String chooseMove() {
+	public String chooseMove(Board tech) {
 		Scanner in = new Scanner(System.in);
-		while(isValid() == false) {
+		boolean isNotValid = true;
+		String temp = null;
+		while(isNotValid) {
 			System.out.println("Where do you want to move?");
 			String x = in.nextLine();
+			if(x.equals("left")) {
+				if(this.x - 1 >= 0) {
+					isNotValid = false;
+					temp = "left";
+					break;
+				}
+			}
+			else if(x.equals("right")) {
+				if(this.x+1 < tech.getSchoolMap().length) {
+					isNotValid = false;
+					temp = "right";
+					break;
+				}
+			}
+			else if(x.equals("up")) {
+				if(this.y-1 >= 0) {
+					isNotValid = false;
+					temp = "up";
+					break;
+				}
+			}
+			else if(x.equals("down")) {
+				if(this.y+1 < tech.getSchoolMap().length) {
+					isNotValid = false;
+					temp = "down";
+					break;
+				}
+			}
 		}
-		return in.nextLine();
+		return temp;
 	}
 	
 	// write a isValid method that will check whether or not the move made was possible. if it isn't, then prompt player to choose again.
-	public boolean isValid() {
+	/*public boolean isValid() {
 		int validCount = 0;
 		if(this.x != 0 && this.y != 0) {
 			validCount++;
@@ -62,21 +92,21 @@ public class Person {
 		}
 		return false;
 	}
-	
+	*/
 	public void movePlayer(Board tech,String move) {
 		Person [] p = {};
 		tech.getSchoolMap()[this.x][this.y].setOccupants(p);
 		if(move.equals("left")) {
-			this.x -= 1;
+			this.y -= 1;
 		}
 		if(move.equals("right")) {
-			this.x += 1;
-		}
-		if(move.equals("up")) {
 			this.y += 1;
 		}
+		if(move.equals("up")) {
+			this.x -= 1;
+		}
 		if(move.equals("down")) {
-			this.y -= 1;
+			this.x += 1;
 		}
 		tech.getSchoolMap()[this.x][this.y].addOccupant(this);
 	}
