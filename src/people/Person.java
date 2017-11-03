@@ -40,59 +40,41 @@ public class Person {
 		while(isNotValid) {
 			System.out.println("Where do you want to move?");
 			String x = in.nextLine();
+			// logic problem with left 
 			if(x.equals("left")) {
 				if(this.x - 1 >= 0) {
 					isNotValid = false;
 					temp = "left";
-					break;
+					//break;
 				}
 			}
 			else if(x.equals("right")) {
 				if(this.x+1 < tech.getSchoolMap().length) {
 					isNotValid = false;
 					temp = "right";
-					break;
+					//break;
 				}
 			}
 			else if(x.equals("up")) {
 				if(this.y-1 >= 0) {
 					isNotValid = false;
 					temp = "up";
-					break;
+					//break;
 				}
 			}
+			// logic error with down
 			else if(x.equals("down")) {
 				if(this.y+1 < tech.getSchoolMap().length) {
 					isNotValid = false;
 					temp = "down";
-					break;
+					//break;
 				}
 			}
 		}
 		return temp;
 	}
 	
-	// write a isValid method that will check whether or not the move made was possible. if it isn't, then prompt player to choose again.
-	/*public boolean isValid() {
-		int validCount = 0;
-		if(this.x != 0 && this.y != 0) {
-			validCount++;
-		}
-		if(this.x != 0 && this.y != 5) {
-			validCount++;
-		}
-		if(this.x != 5 && this.y != 0) {
-			validCount++;
-		}
-		if(this.x != 0 && this.y != 5) {
-			validCount++;
-		}
-		if(validCount == 4) {
-			return true;
-		}
-		return false;
-	}
-	*/
+	
 	public void movePlayer(Board tech,String move) {
 		Person [] p = {};
 		tech.getSchoolMap()[this.x][this.y].setOccupants(p);
