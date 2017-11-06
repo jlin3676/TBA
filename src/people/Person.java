@@ -25,6 +25,10 @@ public class Person {
 	public void setRoom(Room room) {
 		this.room = room;
 	}
+
+	public Room getRoom() {
+		return this.room;
+	}
 	
 	public void print() {
 		System.out.print("[ X ]");
@@ -40,34 +44,30 @@ public class Person {
 		while(isNotValid) {
 			System.out.println("Where do you want to move?");
 			String x = in.nextLine();
-			// logic problem with left 
+			
 			if(x.equals("left")) {
 				if(this.y - 1 >= 0) {
 					isNotValid = false;
 					temp = "left";
-					//break;
 				}
 			}
 			else if(x.equals("right")) {
 				if(this.y+1 < tech.getSchoolMap().length) {
 					isNotValid = false;
 					temp = "right";
-					//break;
 				}
 			}
 			else if(x.equals("up")) {
 				if(this.x-1 >= 0) {
 					isNotValid = false;
 					temp = "up";
-					//break;
 				}
 			}
-			// logic error with down
+			
 			else if(x.equals("down")) {
 				if(this.x+1 < tech.getSchoolMap().length) {
 					isNotValid = false;
 					temp = "down";
-					//break;
 				}
 			}
 		}
@@ -93,5 +93,6 @@ public class Person {
 		tech.getSchoolMap()[this.x][this.y].addOccupant(this);
 	}
 
+	
 }
 

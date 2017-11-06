@@ -1,14 +1,13 @@
 package rooms;
 
 import people.Person;
-import items.Item;
 
 
 public class Hallway extends Room {
 
-    public Hallway(boolean[] doors, Person[] people, Item[] items, int x, int y)
+    public Hallway(boolean[] doors, Person[] people, int x, int y)
     {
-        super(doors, people, items, x, y);
+        super(doors, people, x, y);
     }
 
     public void print()
