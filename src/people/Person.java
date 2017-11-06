@@ -36,7 +36,10 @@ public class Person {
 
 
 
-
+	/*
+	 * Allows the user to input a move command. 
+	 * If the move is not a valid one, the user will be prompted to make another move.
+	 */
 	public String chooseMove(Board tech) {
 		Scanner in = new Scanner(System.in);
 		boolean isNotValid = true;
@@ -74,7 +77,11 @@ public class Person {
 		return temp;
 	}
 	
-	
+	/*
+	 * Clears the array of people in the existing array.
+	 * Takes in a valid move and changes the x and y coordinates of the player.
+	 * Adds in the player into the array again with updated coordinates.
+	 */
 	public void movePlayer(Board tech,String move) {
 		Person [] p = {};
 		tech.getSchoolMap()[this.x][this.y].setOccupants(p);

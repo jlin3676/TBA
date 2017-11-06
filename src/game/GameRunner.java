@@ -1,3 +1,4 @@
+
 package game;
 
 import rooms.*;
@@ -5,7 +6,10 @@ import people.Person;
 import java.util.Scanner;
 import board.Board;
 import java.util.Random;
-
+/**
+ * @author Jacky Lin
+ * Starter code : Mr.Levin
+ */
 public class GameRunner {
 	
     public static void main (String[] args)
@@ -34,8 +38,7 @@ public class GameRunner {
         Scanner in = new Scanner(System.in);
         System.out.println("It's midnight when your friend calls you. He sounds desperate and wants you to go to Tech. Once you arrive, he is not where to be seen. Suddenly, the door swings open. You enter.");
         map[0][0].addOccupant(player1); 
-        Person friend = new Person(1,1,1,3,3);
-    	map[3][3].addOccupant(friend);
+       
         tech.printMap();
         while(gameOn)
         {
@@ -45,6 +48,9 @@ public class GameRunner {
             System.out.println(generateRandomResponse());
             tech.printMap();
             if(turnCount >= 10) {
+            	 Person friend = new Person(1,1,1,3,3);
+             	 map[3][3].addOccupant(friend);
+             	 System.out.println("You hear a scream. It's your friend! Hurry before it's too late!");
             	if(player1.getRoom() == friend.getRoom()) {
             		System.out.println("You found your friend! You've won.");
             		gameOn = false;
@@ -57,8 +63,9 @@ public class GameRunner {
         }
     }
     
+    // Generates a random message after every move.
     public static String generateRandomResponse() {
-    	String [] text = {"Something is amiss.", "You have to find him quickly.", "Time is running short."};
+    	String [] text = {"Something is amiss.", "You have to find him quickly.", "Time is running short.", "You feel a shiver down your spine."};
     	Random rand = new Random();
 		int ab = rand.nextInt(text.length);
 		return text[ab];
